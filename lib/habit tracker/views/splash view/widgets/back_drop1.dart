@@ -7,7 +7,6 @@ class BackDrop1 extends StatelessWidget {
     super.key,
     required this.height,
   });
-
   final double height;
 
   @override
