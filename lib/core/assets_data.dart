@@ -7,4 +7,5 @@ class AssetsData {
   static const avatar1 = 'assets/habit tracker images/avatar1.jpg';
   static const avatar2 = 'assets/habit tracker images/avatar2.jpg';
   static const onboarding3 = 'assets/habit tracker images/onboarding3.png';
+  static const removeIcon1 = 'assets/habit tracker images/removeIcon.png';
 }
