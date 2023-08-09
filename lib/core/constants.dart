@@ -6,6 +6,7 @@ const kBlue100 = Color(0xff3843FF);
 const kGrey1 = Color(0xffEAECF0);
 const kBackground1 =  Color(0xffF6F9FF);
 const kBlack20 =  Color(0xffCDCDD0);
+const kBlack40 =  Color(0xff9B9BA1);
 const kGreen100 =  Color(0xff3BA935);
 
 

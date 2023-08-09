@@ -45,7 +45,7 @@ class _CreateAccountView1BodyState extends State<CreateAccountView1Body> {
             mainAxisSize: MainAxisSize.min,
             children: [
               CustomNextButton(onPressed: (){navigateTo(context, const CreateAccountView2());},),
-              const SizedBox(height: 20),
+              const SizedBox(height: 10),
             ],
           ),
         ),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../../../core/constants.dart';
+import '../model/habits card model.dart';
 import 'custom_circular_percent.dart';
-import 'habits_card_listview.dart';
 import 'list_tile_sub_title.dart';
 import 'list_tile_title.dart';
 
@@ -10,7 +10,7 @@ class HabitsCardItem extends StatelessWidget {
     super.key,
     required this.cardItem,
   });
-  final CardItem cardItem;
+  final HabitsCardModel cardItem;
   @override
   Widget build(BuildContext context) {
     return Card(
