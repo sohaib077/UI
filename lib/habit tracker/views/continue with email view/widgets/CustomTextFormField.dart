@@ -4,13 +4,19 @@ import '../../../../core/assets_data.dart';
 import '../../../../core/constants.dart';
 
 class CustomTextFormField extends StatefulWidget {
-  const CustomTextFormField({Key? key, required this.controller, required this.hintText, this.obscureText, required this.keyboardType})
-      : super(key: key);
+  const CustomTextFormField({
+    Key? key,
+    required this.controller,
+    required this.hintText,
+    this.obscureText,
+    this.keyboardType = TextInputType.text,
+  }) : super(key: key);
 
   final TextEditingController controller;
   final String hintText;
-  final bool ? obscureText;
+  final bool? obscureText;
   final TextInputType keyboardType;
+
   @override
   State<CustomTextFormField> createState() => _CustomTextFormFieldState();
 }
@@ -20,7 +26,7 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
   Widget build(BuildContext context) {
     return TextFormField(
       onChanged: (s) {
-        if(widget.controller.text.length <= 1 ) setState(() {});
+        if (widget.controller.text.length <= 1) setState(() {});
       },
       obscureText: widget.obscureText ?? false,
       cursorColor: Colors.black,

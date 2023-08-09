@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:swipe_back_detector/swipe_back_detector.dart';
+import 'package:ui/core/styles.dart';
+
+import '../habit tracker/views/continue with email view/custom_back_arrow.dart';
 
 // ============================ N A V I G A T I O N S ======================================
 
@@ -68,4 +71,16 @@ void navigateAndFinish(context, widget, {double x = 1.0, double y = 0.0}) =>
 
 void unfocus(context) {
   FocusScope.of(context).unfocus();
+}
+
+AppBar customAppBar(String title) {
+  return AppBar(
+    title: Text(
+      title,
+      style: Styles.appBarTextStyle,
+    ),
+    leading: const CustomBackArrow(),
+    titleSpacing: 0,
+    elevation: .5,
+  );
 }

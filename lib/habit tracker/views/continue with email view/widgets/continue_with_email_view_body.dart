@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ui/core/styles.dart';
 import 'package:ui/habit tracker/views/continue with email view/widgets/create_account_text_button.dart';
+import 'package:ui/habit tracker/views/continue with email view/widgets/custom_label.dart';
 import 'package:ui/habit tracker/views/continue with email view/widgets/custom_next_button.dart';
 import 'package:ui/habit tracker/views/continue with email view/widgets/forgot_password_text_button.dart';
 import 'package:ui/habit%20tracker/views/continue%20with%20email%20view/widgets/CustomTextFormField.dart';
@@ -37,21 +37,15 @@ class _ContinueWithEmailViewBodyState extends State<ContinueWithEmailViewBody> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Spacer(),
-            Text(
-              'E-MAIL',
-              style: Styles.labelTextStyle,
-            ),
+            const SizedBox(height: 20),
+            const CustomLabel(label: 'E-MAIL'),
             CustomTextFormField(
               controller: emailController,
               hintText: 'Enter your e-mail',
               keyboardType: TextInputType.emailAddress,
             ),
             const SizedBox(height: 20),
-            Text(
-              'PASSWORD',
-              style: Styles.labelTextStyle,
-            ),
+            const CustomLabel(label: 'PASSWORD'),
             CustomTextFormField(
               controller: passwordController,
               hintText: 'Enter your password',
@@ -60,11 +54,11 @@ class _ContinueWithEmailViewBodyState extends State<ContinueWithEmailViewBody> {
             ),
             const SizedBox(height: 15),
             const ForgotPasswordTextButton(),
-            const Spacer(flex: 2),
+            const Spacer(flex: 1),
             const CreateAccountTextButton(),
             const SizedBox(height: 15),
             const CustomNextButton(),
-            const Spacer(flex: 3,),
+            const Spacer(flex: 3),
           ],
         ),
       ),

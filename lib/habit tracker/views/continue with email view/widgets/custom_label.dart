@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:ui/core/styles.dart';
 
-class CustomAppBarTitle extends StatelessWidget {
-  const CustomAppBarTitle({
+class CustomLabel extends StatelessWidget {
+  const CustomLabel({
     super.key,
-    required this.text,
+    required this.label,
   });
 
-  final String text;
+  final String label;
 
   @override
   Widget build(BuildContext context) {
     return Text(
-      text,
-      style: Styles.appBarTextStyle,
+      label,
+      style: Styles.labelTextStyle,
     );
   }
 }
