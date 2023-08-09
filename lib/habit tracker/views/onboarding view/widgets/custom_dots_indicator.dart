@@ -16,7 +16,7 @@ class CustomDotsIndicator extends StatelessWidget {
           alignment: Alignment.centerLeft,
           child: DotsIndicator(
             dotsCount: 3,
-            position: OnboardingCubit.get(context).currentIndex + 0.0,
+            position: OnboardingCubit.get(context).currentIndex ,
             decorator: DotsDecorator(
               color: const Color(0xff888EFF),
               activeColor: Colors.white,

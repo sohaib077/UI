@@ -8,8 +8,8 @@ class OnboardingCubit extends Cubit<OnboardingState> {
   OnboardingCubit() : super(OnboardingInitial());
   static OnboardingCubit get(context) => BlocProvider.of(context);
 
-  int currentIndex = 0;
-  void changeIndex(int index){
+  double currentIndex = 0;
+  void changeIndex(double index){
     currentIndex = index;
     emit(ChangeIndexState());
   }

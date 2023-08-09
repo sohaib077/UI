@@ -24,14 +24,9 @@ class CustomCarouselSlider extends StatelessWidget {
       options: CarouselOptions(
         height: height * 0.65,
         enlargeCenterPage: true,
-        // autoPlay: true,
-        // aspectRatio: 16 / 9,
-        // autoPlayCurve: Curves.fastOutSlowIn,
-        enableInfiniteScroll: true,
-        autoPlayAnimationDuration: const Duration(milliseconds: 800),
         viewportFraction: 1,
-        onPageChanged: (index, reason) {
-          OnboardingCubit.get(context).changeIndex(index);
+        onScrolled: (index) {
+          OnboardingCubit.get(context).changeIndex((index! - 10000) % 3);
         },
       ),
     );
