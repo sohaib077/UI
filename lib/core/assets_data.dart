@@ -8,4 +8,12 @@ class AssetsData {
   static const avatar2 = 'assets/habit tracker images/avatar2.jpg';
   static const onboarding3 = 'assets/habit tracker images/onboarding3.png';
   static const removeIcon1 = 'assets/habit tracker images/removeIcon.png';
+  static const addIcon = 'assets/habit tracker images/addIcon.svg';
+  static const discoverIcon = 'assets/habit tracker images/discoverIcon.svg';
+  static const homeIcon = 'assets/habit tracker images/homeIcon.svg';
+  static const achievementIcon = 'assets/habit tracker images/achievementIcon.svg';
+  static const profileIcon = 'assets/habit tracker images/profileIcon.svg';
+  static const selectedDiscoverIcon = 'assets/habit tracker images/selectedDiscoverIcon.svg';
+  static const selectedAchievementIcon = 'assets/habit tracker images/selectedAchievementIcon.svg';
+  static const selectedProfileIcon = 'assets/habit tracker images/selectedProfileIcon.svg';
 }

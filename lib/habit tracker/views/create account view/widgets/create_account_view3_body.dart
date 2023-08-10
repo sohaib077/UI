@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:ui/core/constants.dart';
+import '../../../../core/shared_methods.dart';
 import '../../../../core/styles.dart';
 import '../../continue with email view/widgets/custom_next_button.dart';
+import '../../home layout/home layout view.dart';
 import '../models/gridview item model.dart';
 import 'custom_grid_view.dart';
 
@@ -53,7 +55,7 @@ class CreateAccountView3Body extends StatelessWidget {
               padding: const EdgeInsets.only(bottom: 10),
               child: CustomNextButton(
                 onPressed: () {
-                  // navigateTo(context, const CreateAccountView3());
+                  navigateAndFinish(context, const HomeLayoutView());
                 },
               ),
             ),

@@ -1,3 +1,4 @@
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:ui/core/constants.dart';
 import 'package:ui/habit%20tracker/views/continue%20with%20email%20view/widgets/continue_with_email_view_body.dart';
@@ -23,4 +24,3 @@ class ContinueWithEmailView extends StatelessWidget {
     );
   }
 }
-
