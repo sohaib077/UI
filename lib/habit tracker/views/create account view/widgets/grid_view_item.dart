@@ -31,7 +31,7 @@ class GridViewItem extends StatelessWidget {
               borderRadius: BorderRadius.circular(kMaxRadius),
               border: Border.all(
                 width: 1,
-                color: CreateAccountCubit.get(context).gender == index ? kBlue100 : kGrey1,
+                color: CreateAccountCubit.get(context).gender == index ? kBlue100 : kBlack10,
               ),
             ),
             child: Column(

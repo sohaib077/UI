@@ -21,7 +21,7 @@ class Onboarding2 extends StatelessWidget {
         const ChallengesCard(),
         const SizedBox(height: 4),
         const CustomOnboarding2Text(title: 'Habits'),
-        const HabitsCardListview(),
+        const Expanded(child: HabitsCardListview()),
         Custom2TextsColumn(
           height: height,
           headline: 'Track\nYour Progress',

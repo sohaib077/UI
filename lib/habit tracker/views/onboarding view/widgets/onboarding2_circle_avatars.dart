@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ui/core/assets_data.dart';
 import 'package:ui/core/constants.dart';
+import 'package:ui/habit tracker/views/onboarding view/widgets/custom_add_icon.dart';
 
 class Onboarding2CircleAvatars extends StatelessWidget {
   const Onboarding2CircleAvatars({
@@ -20,7 +21,7 @@ class Onboarding2CircleAvatars extends StatelessWidget {
         Align(
           widthFactor: 0.6,
           child: CircleAvatar(
-            radius: add ? 13 :11,
+            radius: add ? 13 : 11,
             backgroundImage: Image.asset(AssetsData.avatar1).image,
           ),
         ),
@@ -32,7 +33,7 @@ class Onboarding2CircleAvatars extends StatelessWidget {
             child: Transform.scale(
               scaleX: -1,
               child: CircleAvatar(
-                radius: add ? 13 :11,
+                radius: add ? 13 : 11,
                 backgroundImage: Image.asset(AssetsData.avatar2).image,
               ),
             ),
@@ -56,21 +57,7 @@ class Onboarding2CircleAvatars extends StatelessWidget {
             ),
           ),
         if (add) const SizedBox(width: 10),
-        if (add)
-          Container(
-            decoration: BoxDecoration(
-              borderRadius: const BorderRadius.all(Radius.circular(kMinRadius)),
-              border: Border.all(
-                width: 1.5,
-                color: kGrey1,
-              ),
-            ),
-            child: const Icon(
-              Icons.add_rounded,
-              color: Colors.black,
-              size: 22,
-            ),
-          ),
+        if (add) const CustomAddIcon(),
       ],
     );
   }

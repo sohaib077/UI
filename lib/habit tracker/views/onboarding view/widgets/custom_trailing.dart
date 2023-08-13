@@ -23,7 +23,7 @@ class CustomTrailing extends StatelessWidget {
             borderRadius: const BorderRadius.all(Radius.circular(kMinRadius)),
             border: Border.all(
               width: 1.5,
-              color: kGrey1,
+              color: kBlack10,
             ),
           ),
           child: const Icon(

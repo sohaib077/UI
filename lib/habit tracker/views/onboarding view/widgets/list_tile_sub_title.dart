@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ui/core/constants.dart';
 
 class ListTileSubTitle extends StatelessWidget {
   const ListTileSubTitle({
@@ -15,7 +16,7 @@ class ListTileSubTitle extends StatelessWidget {
         Text(
           subTitle,
           style: const TextStyle(
-            color: Color(0xff9B9BA1),
+            color:kBlack40,
             fontSize: 10,
           ),
         ),
@@ -24,7 +25,7 @@ class ListTileSubTitle extends StatelessWidget {
         const Text(
           '2 friends joined',
           style: TextStyle(
-            color: Color(0xff9B9BA1),
+            color: kBlack40,
             fontSize: 10,
           ),
         ),

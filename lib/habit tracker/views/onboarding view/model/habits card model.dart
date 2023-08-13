@@ -7,7 +7,7 @@ class HabitsCardModel {
   final double percent;
   final Widget trailing;
 
-  HabitsCardModel({
+  const HabitsCardModel({
     required this.title,
     required this.subTitle,
     required this.leadingIcon,

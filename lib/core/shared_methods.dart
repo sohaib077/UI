@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:swipe_back_detector/swipe_back_detector.dart';
+import 'package:ui/core/constants.dart';
 import 'package:ui/core/styles.dart';
 
 import '../habit tracker/views/continue with email view/custom_back_arrow.dart';
@@ -82,5 +83,13 @@ AppBar customAppBar(String title) {
     leading: const CustomBackArrow(),
     titleSpacing: 0,
     elevation: .5,
+  );
+}
+AppBar customEmptyAppBar({Color ?color}) {
+  return AppBar(
+    titleSpacing: 0,
+    elevation: 0,
+    toolbarHeight: 0,
+    backgroundColor: color ?? Colors.white,
   );
 }

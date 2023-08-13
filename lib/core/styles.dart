@@ -24,4 +24,24 @@ abstract class Styles {
   static const TextStyle subTitleTextStyle = TextStyle(
     color: kBlack40,
   );
+  static const TextStyle dateTextStyle = TextStyle(
+    color: Colors.black,
+    fontSize: 16,
+    fontWeight: FontWeight.bold,
+  );
+  static const TextStyle dayTextStyle = TextStyle(
+    color: kBlack20,
+    fontSize: 10,
+    fontWeight: FontWeight.bold,
+    letterSpacing: 1,
+  );
+  static const TextStyle listTileTitle = TextStyle(
+    color: Colors.white,
+    fontWeight: FontWeight.w500,
+    fontSize: 13,
+  );
+  static const TextStyle listTileSubTitle = TextStyle(
+    color: kBlue40,
+    fontSize: 12,
+  );
 }

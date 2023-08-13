@@ -17,10 +17,10 @@ class CustomCircularPercent extends StatelessWidget {
   Widget build(BuildContext context) {
     return CircularPercentIndicator(
       radius: 15,
-      lineWidth: 3.0,
+      lineWidth: 2.0,
       percent: percent,
       progressColor: kBlue100,
-      backgroundColor: kGrey1,
+      backgroundColor: kBlack10,
       circularStrokeCap: CircularStrokeCap.round,
       animation: true,
       center: Text(

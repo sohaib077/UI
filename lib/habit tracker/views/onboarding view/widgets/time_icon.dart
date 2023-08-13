@@ -19,6 +19,7 @@ class TimeIcon extends StatelessWidget {
         const Icon(
           Icons.watch_later,
           color: Color(0xffEBECFF),
+
         ),
       ],
     );

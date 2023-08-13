@@ -12,7 +12,7 @@ class CustomBackArrow extends StatelessWidget {
       padding: const EdgeInsets.all(8),
       child: Container(
         decoration: BoxDecoration(
-          border: Border.all(width: 1, color: kGrey1),
+          border: Border.all(width: 1, color: kBlack10),
           borderRadius: BorderRadius.circular(kMaxRadius),
         ),
         child: InkWell(

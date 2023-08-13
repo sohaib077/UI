@@ -16,4 +16,7 @@ class AssetsData {
   static const selectedDiscoverIcon = 'assets/habit tracker images/selectedDiscoverIcon.svg';
   static const selectedAchievementIcon = 'assets/habit tracker images/selectedAchievementIcon.svg';
   static const selectedProfileIcon = 'assets/habit tracker images/selectedProfileIcon.svg';
+  static const calendarIcon = 'assets/habit tracker images/calendarIcon.svg';
+  static const notificationIcon = 'assets/habit tracker images/notificationIcon.svg';
+  static const redDotIcon = 'assets/habit tracker images/redDotIcon.svg';
 }

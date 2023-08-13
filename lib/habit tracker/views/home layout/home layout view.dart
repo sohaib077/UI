@@ -11,11 +11,19 @@ class HomeLayoutView extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => HomeLayoutCubit(),
-      child: Scaffold(
-        body: Column(),
-        bottomNavigationBar: const CustomBottomNavigationBar(),
-        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-        floatingActionButton: const CustomAddFloatingActionButton(),
+      child: BlocBuilder<HomeLayoutCubit, HomeLayoutState>(
+        builder: (context, state) {
+          return Scaffold(
+            body: HomeLayoutCubit.get(context)
+                .pages[HomeLayoutCubit.get(context).currentPageIndex],
+            bottomNavigationBar: CustomBottomNavigationBar(
+              currentPageIndex: HomeLayoutCubit.get(context).currentPageIndex,
+            ),
+            floatingActionButtonLocation:
+                FloatingActionButtonLocation.centerDocked,
+            floatingActionButton: const CustomAddFloatingActionButton(),
+          );
+        },
       ),
     );
   }
