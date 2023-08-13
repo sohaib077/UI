@@ -47,6 +47,7 @@ class HomeViewBody extends StatelessWidget {
                     const HomeTitlesRow(title: 'Habits'),
                     const SizedBox(height: 1),
                     const HabitsCardListview(itemCount: 4),
+                    const SizedBox(height: 70),
                   ],
                 ),
               ),
