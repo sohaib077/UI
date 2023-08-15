@@ -64,7 +64,7 @@ class CustomBottomNavigationBar extends StatelessWidget {
         BottomNavigationBarItem(
           icon: SvgPicture.asset(
             AssetsData.addIcon,
-            height: 20,
+            height: 10,
           ),
           label: '',
         ),

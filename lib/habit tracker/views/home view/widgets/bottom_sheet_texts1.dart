@@ -1,24 +1,29 @@
 import 'package:flutter/material.dart';
 import 'package:ui/core/styles.dart';
 
-class BottomSheetTexts1 extends StatelessWidget {
-  const BottomSheetTexts1({
+class BottomSheetTexts extends StatelessWidget {
+  const BottomSheetTexts({
     super.key,
+    this.title,
+    this.subTitle,
   });
+
+  final String? title;
+  final String? subTitle;
 
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Text(
-          "Add Mood",
-          style: TextStyle(fontWeight: FontWeight.w500),
+        Text(
+          title ?? "Add Mood",
+          style: Styles.mediumWeightTextStyle,
         ),
         const SizedBox(height: 2),
         Text(
-          "How’re you feeling?",
-          style: Styles.subTitleTextStyle.copyWith(fontSize: 12),
+          subTitle ?? "How’re you feeling?",
+          style: Styles.bottomSheetSubTitle,
         ),
       ],
     );

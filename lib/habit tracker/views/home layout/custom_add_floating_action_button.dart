@@ -100,6 +100,7 @@ class _CustomAddFloatingActionButtonState
   Future<dynamic> customShowDialog(BuildContext context, double height) {
     return showDialog(
       barrierColor: kBlack100.withOpacity(.65),
+      barrierDismissible: false,
       context: context,
       builder: (context) => Dialog(
         backgroundColor: Colors.transparent,

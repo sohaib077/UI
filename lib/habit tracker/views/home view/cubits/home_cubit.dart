@@ -20,7 +20,15 @@ class HomeCubit extends Cubit<HomeState> {
   }
 
   int goals = 1;
+
   void randomGoals() {
     goals = Random().nextInt(5);
+  }
+
+  int emojiIndex = -1;
+
+  void changeEmojiIcon(int index) {
+    emojiIndex = index;
+    emit(ChangeEmojiIndexState());
   }
 }

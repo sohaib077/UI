@@ -1,45 +1,45 @@
 import 'package:flutter/material.dart';
-import 'package:ui/core/constants.dart';
-import 'package:ui/habit tracker/views/home view/widgets/bottom_sheet_list_view.dart';
-import 'package:ui/habit tracker/views/home view/widgets/bottom_sheet_texts1.dart';
+import 'package:ui/core/assets_data.dart';
+import 'package:ui/habit tracker/views/home view/widgets/custom_bottom_sheet_add_mode_row.dart';
 import 'package:ui/habit tracker/views/home view/widgets/custom_bottom_sheet_floating_close_button.dart';
-import 'package:ui/habit%20tracker/views/onboarding%20view/widgets/custom_container.dart';
+import 'package:ui/habit tracker/views/home view/widgets/custom_bottom_sheet_row.dart';
 
 class CustomBottomSheet extends StatelessWidget {
-  const CustomBottomSheet({Key? key, required this.controller, required this.animation}) : super(key: key);
+  const CustomBottomSheet(
+      {Key? key, required this.controller, required this.animation})
+      : super(key: key);
   final AnimationController controller;
   final Animation<double> animation;
+
   @override
   Widget build(BuildContext context) {
-    final double width = MediaQuery.of(context).size.width;
-
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 13),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          CustomContainer(
-            margin: 0,
-            padding: const EdgeInsets.only(
-              top: kNormPadding - 3,
-              bottom: kNormPadding - 3,
-              left: kNormPadding - 3,
-            ),
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    const BottomSheetTexts1(),
-                    const SizedBox(width: 5),
-                    BottomSheetListView(width: width),
-                  ],
-                ),
-              ],
-            ),
+          Row(
+            children: const [
+              CustomBottomSheetRow(
+                title: "Quit Bad Habit",
+                subTitle: "Never too late...",
+                icon: AssetsData.shieldFailIcon,
+              ),
+              SizedBox(width: 8),
+              CustomBottomSheetRow(
+                title: "New Good Habit",
+                subTitle: "For a better life",
+                icon: AssetsData.shieldDoneIcon,
+              ),
+            ],
           ),
-          CustomBottomSheetFloatingCloseButton( controller: controller , animation: animation,),
+          const SizedBox(height: 8),
+          const CustomBottomSheetAddModeRow(),
+          const SizedBox(height: 8),
+          CustomBottomSheetFloatingCloseButton(
+            controller: controller,
+            animation: animation,
+          ),
         ],
       ),
     );

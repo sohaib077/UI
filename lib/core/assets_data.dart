@@ -23,4 +23,6 @@ class AssetsData {
   static const showIcon = 'assets/habit tracker images/showIcon.svg';
   static const rightArrowIcon = 'assets/habit tracker images/rightArrowIcon.svg';
   static const closeIcon = 'assets/habit tracker images/closeIcon.svg';
+  static const shieldFailIcon = 'assets/habit tracker images/shieldFailIcon.svg';
+  static const shieldDoneIcon = 'assets/habit tracker images/shieldDoneIcon.svg';
 }

@@ -9,12 +9,9 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => HomeCubit(),
-      child: Scaffold(
-        appBar: customEmptyAppBar(),
-        body: const HomeViewBody(),
-      ),
+    return Scaffold(
+      appBar: customEmptyAppBar(),
+      body: const HomeViewBody(),
     );
   }
 }

@@ -44,4 +44,10 @@ abstract class Styles {
     color: kBlue40,
     fontSize: 12,
   );
+  static const TextStyle bottomSheetSubTitle = TextStyle(
+    color: kBlack40,
+    fontSize: 12,
+  );
+  static const TextStyle mediumWeightTextStyle =
+      TextStyle(fontWeight: FontWeight.w500);
 }

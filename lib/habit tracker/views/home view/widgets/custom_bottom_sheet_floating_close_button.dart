@@ -20,7 +20,7 @@ class CustomBottomSheetFloatingCloseButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: kNormPadding - 5),
+      padding: const EdgeInsets.only(bottom: kNormPadding - 5 ),
       child: FloatingActionButton.small(
         hoverElevation: 0,
         backgroundColor: Colors.transparent,

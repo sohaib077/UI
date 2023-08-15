@@ -17,7 +17,7 @@ class HomeLayoutCubit extends Cubit<HomeLayoutState> {
   List<Widget> pages = const [
     HomeView(),
     DiscoverView(),
-    DiscoverView(),
+    HomeView(),
     AchievementView(),
     ProfileView(),
   ];
