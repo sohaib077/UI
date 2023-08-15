@@ -19,4 +19,8 @@ class AssetsData {
   static const calendarIcon = 'assets/habit tracker images/calendarIcon.svg';
   static const notificationIcon = 'assets/habit tracker images/notificationIcon.svg';
   static const redDotIcon = 'assets/habit tracker images/redDotIcon.svg';
+  static const checkIcon = 'assets/habit tracker images/checkIcon.svg';
+  static const showIcon = 'assets/habit tracker images/showIcon.svg';
+  static const rightArrowIcon = 'assets/habit tracker images/rightArrowIcon.svg';
+  static const closeIcon = 'assets/habit tracker images/closeIcon.svg';
 }
