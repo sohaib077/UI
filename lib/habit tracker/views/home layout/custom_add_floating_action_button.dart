@@ -2,11 +2,10 @@
 
 import 'dart:math';
 
-import 'package:animate_icons/animate_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:ui/core/constants.dart';
-import 'package:ui/core/my_flutter_app_icons.dart';
+import 'package:ui/habit%20tracker/views/home%20view/widgets/custom_bottom_sheet.dart';
 
 import '../../../core/assets_data.dart';
 
@@ -25,7 +24,6 @@ class _CustomAddFloatingActionButtonState
     with SingleTickerProviderStateMixin {
   late AnimationController controller;
   late Animation<double> animation;
-  bool isAdd = true;
 
   @override
   void initState() {
@@ -46,6 +44,8 @@ class _CustomAddFloatingActionButtonState
 
   @override
   Widget build(BuildContext context) {
+    final double height = MediaQuery.of(context).size.height;
+
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: kNormPadding - 5),
       child: Align(
@@ -81,12 +81,10 @@ class _CustomAddFloatingActionButtonState
                     highlightColor: Colors.transparent,
                     hoverColor: Colors.transparent,
                     splashColor: Colors.transparent,
-                    onPressed: () {
-                      if (isAdd)
-                        controller.forward();
-                      else
-                        controller.reverse();
-                         isAdd = !isAdd;
+                    onPressed: () async {
+                      controller.forward().then((value) {
+                        customShowDialog(context, height);
+                      });
                     },
                     icon: SvgPicture.asset(AssetsData.addIcon),
                   ),
@@ -94,6 +92,24 @@ class _CustomAddFloatingActionButtonState
               );
             },
           ),
+        ),
+      ),
+    );
+  }
+
+  Future<dynamic> customShowDialog(BuildContext context, double height) {
+    return showDialog(
+      barrierColor: kBlack100.withOpacity(.65),
+      context: context,
+      builder: (context) => Dialog(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        clipBehavior: Clip.antiAliasWithSaveLayer,
+        alignment: Alignment.bottomCenter,
+        insetPadding: EdgeInsets.only(top: height * .6, bottom: height * .0),
+        child: CustomBottomSheet(
+          controller: controller,
+          animation: animation,
         ),
       ),
     );

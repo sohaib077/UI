@@ -11,11 +11,11 @@ const kBlue100 = Color(0xff3843FF);
 const kBlue10 = Color(0xffDDF2FC);
 const kBlue40 = Color(0xffAFB4FF);
 const kBlack10 = Color(0xffEAECF0);
-const kBackground1 =  Color(0xffF6F9FF);
-const kBlack20 =  Color(0xffCDCDD0);
-const kBlack40 =  Color(0xff9B9BA1);
-const kGreen100 =  Color(0xff3BA935);
-
+const kBackground1 = Color(0xffF6F9FF);
+const kBlack20 = Color(0xffCDCDD0);
+const kBlack40 = Color(0xff9B9BA1);
+const kBlack100 = Color(0xff040415);
+const kGreen100 = Color(0xff3BA935);
 
 const double kMinPadding = 8;
 const double kNormPadding = 16;
@@ -56,3 +56,5 @@ const List<HabitsCardModel> cardList = [
     trailing: CustomAddIcon(),
   ),
 ];
+
+const List<String> emojis = ['😡', '☹', '😐️', "🙂", "😍"];
