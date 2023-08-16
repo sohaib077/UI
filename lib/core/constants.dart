@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ui/core/assets_data.dart';
 
 import '../habit tracker/views/onboarding view/model/habits card model.dart';
 import '../habit tracker/views/onboarding view/widgets/custom_add_icon.dart';
@@ -10,12 +11,16 @@ const kBlue1 = Color(0xff000dff);
 const kBlue100 = Color(0xff3843FF);
 const kBlue10 = Color(0xffDDF2FC);
 const kBlue40 = Color(0xffAFB4FF);
+const kBlue20 = Color(0xffD7D9FF);
 const kBlack10 = Color(0xffEAECF0);
 const kBackground1 = Color(0xffF6F9FF);
 const kBlack20 = Color(0xffCDCDD0);
 const kBlack40 = Color(0xff9B9BA1);
 const kBlack100 = Color(0xff040415);
+const kBlack60 = Color(0xff686873);
 const kGreen100 = Color(0xff3BA935);
+const kOrange20 = Color(0xffFCDCD3);
+const kTeal20 = Color(0xffD5ECE0);
 
 const double kMinPadding = 8;
 const double kNormPadding = 16;
@@ -58,3 +63,9 @@ const List<HabitsCardModel> cardList = [
 ];
 
 const List<String> emojis = ['😡', '☹', '😐️', "🙂", "😍"];
+
+const List<Map<String, dynamic>> habitModel = [
+  {"color": kOrange20, "icon": "🚶‍♀️", "title": "Walk", "subTitle": "10 km"},
+  {"color": kBlue20, "icon": "🏊🏻‍♂️", "title": "Swim", "subTitle": "30 min"},
+  {"color": kTeal20, "icon": "📕", "title": "Read", "subTitle": "20 min"},
+];

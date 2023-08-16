@@ -30,6 +30,7 @@ class CustomBottomSheet extends StatelessWidget {
                 title: "New Good Habit",
                 subTitle: "For a better life",
                 icon: AssetsData.shieldDoneIcon,
+                flag : true,
               ),
             ],
           ),

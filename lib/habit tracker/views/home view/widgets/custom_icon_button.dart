@@ -10,11 +10,15 @@ class CustomIconButton extends StatelessWidget {
     required this.icon,
     this.onTap,
     this.isNotification = false,
+    this.iconColor,
+    this.padding,
   });
 
   final String icon;
+  final Color? iconColor;
   final void Function()? onTap;
   final bool isNotification;
+  final double? padding;
 
   @override
   Widget build(BuildContext context) {
@@ -26,13 +30,13 @@ class CustomIconButton extends StatelessWidget {
         borderRadius: BorderRadius.circular(kMaxRadius),
       ),
       child: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: EdgeInsets.all(padding ?? 8.0),
         child: InkWell(
           borderRadius: BorderRadius.circular(kMaxRadius),
           onTap: onTap ?? () {},
           child: Stack(
             children: [
-              SvgPicture.asset(icon),
+              SvgPicture.asset(icon, color: iconColor),
               if (isNotification)
                 Align(
                   alignment: Alignment.topRight,
