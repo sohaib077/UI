@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:ui/core/constants.dart';
-import 'package:ui/habit tracker/views/home view/widgets/popular_habits_list_view_item.dart';
+import 'package:ui/habit tracker/views/home view/widgets/popular_habits_list_view.dart';
 import 'package:ui/habit%20tracker/views/home%20view/widgets/bottom_sheet_texts1.dart';
 import 'package:ui/habit%20tracker/views/onboarding%20view/widgets/custom_container.dart';
 
@@ -59,7 +59,11 @@ class CustomBottomSheetRow extends StatelessWidget {
             Stack(
               alignment: Alignment.bottomCenter,
               children: [
-                Container(color: Colors.white, height: 5, width: double.infinity,),
+                Container(
+                  color: Colors.white,
+                  height: 5,
+                  width: double.infinity,
+                ),
                 SvgPicture.asset(AssetsData.top),
               ],
             ),
@@ -73,8 +77,8 @@ class CustomBottomSheetRow extends StatelessWidget {
                 children: [
                   Text(
                     'NEW GOOD HABIT',
-                    style: Styles.bottomSheetSubTitle.copyWith(
-                        fontSize: 10, fontWeight: FontWeight.bold),
+                    style: Styles.bottomSheetSubTitle
+                        .copyWith(fontSize: 10, fontWeight: FontWeight.bold),
                   ),
                   const SizedBox(height: 8),
                   CustomContainer(
@@ -98,22 +102,12 @@ class CustomBottomSheetRow extends StatelessWidget {
                   const SizedBox(height: 10),
                   Text(
                     'POPULAR Habits',
-                    style: Styles.bottomSheetSubTitle.copyWith(
-                        fontSize: 10, fontWeight: FontWeight.bold),
+                    style: Styles.bottomSheetSubTitle
+                        .copyWith(fontSize: 10, fontWeight: FontWeight.bold),
                   ),
                   const SizedBox(height: 8),
                   // const PopularHabitsListViewItem(),
-                  SizedBox(
-                    height: 120,
-                    child: ListView.builder(
-                      itemCount: habitModel.length,
-                      scrollDirection: Axis.horizontal,
-                      physics: const BouncingScrollPhysics(),
-                      itemBuilder: (context, index) {
-                        return PopularHabitsListViewItem(index: index);
-                      },
-                    ),
-                  ),
+                  const PopularHabitsListView(),
                 ],
               ),
             ),

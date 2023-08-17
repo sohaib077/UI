@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:ui/habit tracker/views/home view/widgets/app_bar_separator.dart';
 import 'package:ui/habit tracker/views/home view/widgets/custom_home_app_bar.dart';
 import 'package:ui/habit tracker/views/home view/widgets/daily_goals_card.dart';
-import 'package:ui/habit tracker/views/home view/widgets/home_titles_row.dart';
 import 'package:ui/habit tracker/views/home view/widgets/home_day_date_list_view.dart';
+import 'package:ui/habit tracker/views/home view/widgets/home_titles_row.dart';
 import 'package:ui/habit%20tracker/views/home%20view/cubits/home_cubit.dart';
 import 'package:ui/habit%20tracker/views/onboarding%20view/widgets/challenges_card.dart';
 
@@ -17,7 +18,6 @@ class HomeViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final double width = MediaQuery.of(context).size.width;
     List<String> days = ["THU", "FRI", "SAT", "SUN", "MON", "TUE", "WED"];
     return BlocBuilder<HomeCubit, HomeState>(
       builder: (context, state) {
@@ -26,11 +26,7 @@ class HomeViewBody extends StatelessWidget {
           child: Column(
             children: [
               const CustomHomeAppBar(),
-              Container(
-                width: width,
-                height: 1,
-                color: kBlack10,
-              ),
+              const AppBarSeparator(),
               const SizedBox(height: 10),
               HomeDayDateListView(days: days),
               const SizedBox(height: 10),

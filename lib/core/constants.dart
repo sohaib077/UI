@@ -21,7 +21,6 @@ const kBlack60 = Color(0xff686873);
 const kGreen100 = Color(0xff3BA935);
 const kOrange20 = Color(0xffFCDCD3);
 const kTeal20 = Color(0xffD5ECE0);
-
 const double kMinPadding = 8;
 const double kNormPadding = 16;
 const double kMaxPadding = 24;
@@ -68,4 +67,22 @@ const List<Map<String, dynamic>> habitModel = [
   {"color": kOrange20, "icon": "🚶‍♀️", "title": "Walk", "subTitle": "10 km"},
   {"color": kBlue20, "icon": "🏊🏻‍♂️", "title": "Swim", "subTitle": "30 min"},
   {"color": kTeal20, "icon": "📕", "title": "Read", "subTitle": "20 min"},
+  {
+    "color": Colors.white,
+    "icon": "😻️",
+    "title": "Cat Lovers",
+    "subTitle": "462 members"
+  },
+  {
+    "color": Colors.white,
+    "icon": "🌃",
+    "title": "Istanbul",
+    "subTitle": "+500 members"
+  },
+  {
+    "color": Colors.white,
+    "icon": "🏃🏻‍♂",
+    "title": "Runners",
+    "subTitle": "336 members"
+  },
 ];

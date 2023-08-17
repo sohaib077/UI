@@ -13,9 +13,9 @@ class PopularHabitsListViewItem extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(right: 12),
       child: Container(
-        height: 120,
+        // height: 120,
         width: 120,
-        padding: const EdgeInsets.all(kNormPadding),
+        padding: const EdgeInsets.all(kNormPadding-2),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(kMaxRadius),
           color: habitModel[index]["color"],
@@ -32,7 +32,7 @@ class PopularHabitsListViewItem extends StatelessWidget {
               margin: EdgeInsets.zero,
               child: Text(
                 habitModel[index]["icon"],
-                style: const TextStyle(color: Colors.black, fontSize: 25),
+                style: const TextStyle(color: Colors.black, fontSize: 20),
               ),
             ),
             const SizedBox(height: 8),

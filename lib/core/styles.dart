@@ -50,4 +50,9 @@ abstract class Styles {
   );
   static const TextStyle mediumWeightTextStyle =
       TextStyle(fontWeight: FontWeight.w500);
+  static const TextStyle cardSubtitleTextStyle = TextStyle(
+    color: Colors.white,
+    fontWeight: FontWeight.w300,
+    fontSize: 12,
+  );
 }
