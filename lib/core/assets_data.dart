@@ -30,4 +30,6 @@ class AssetsData {
   static const learningImage2 = 'assets/habit tracker images/learningImage2.jpg';
   static const learningImage1 = 'assets/habit tracker images/learningImage1.jpg';
   static const folderIcon = 'assets/habit tracker images/folderIcon.svg';
+  static const users3Icon = 'assets/habit tracker images/users3Icon.svg';
+  static const medalIcon = 'assets/habit tracker images/medalIcon.svg';
 }

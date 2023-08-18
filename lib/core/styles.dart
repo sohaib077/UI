@@ -55,4 +55,6 @@ abstract class Styles {
     fontWeight: FontWeight.w300,
     fontSize: 12,
   );
+  static const TextStyle subLabelTextStyle =
+      TextStyle(color: kBlack40, fontSize: 10, fontWeight: FontWeight.bold);
 }

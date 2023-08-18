@@ -19,6 +19,7 @@ const kBlack40 = Color(0xff9B9BA1);
 const kBlack100 = Color(0xff040415);
 const kBlack60 = Color(0xff686873);
 const kGreen100 = Color(0xff3BA935);
+const kRed100 = Color(0xffE3524F);
 const kOrange20 = Color(0xffFCDCD3);
 const kTeal20 = Color(0xffD5ECE0);
 const double kMinPadding = 8;
