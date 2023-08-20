@@ -26,6 +26,7 @@ class CustomIconButton extends StatelessWidget {
       width: 40,
       height: 40,
       decoration: BoxDecoration(
+        color: Colors.white,
         border: Border.all(width: 1, color: kBlack10),
         borderRadius: BorderRadius.circular(kMaxRadius),
       ),
@@ -35,6 +36,7 @@ class CustomIconButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(kMaxRadius),
           onTap: onTap ?? () {},
           child: Stack(
+            alignment: Alignment.center,
             children: [
               SvgPicture.asset(icon, color: iconColor),
               if (isNotification)

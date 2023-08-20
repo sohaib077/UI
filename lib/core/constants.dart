@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:ui/core/assets_data.dart';
+import 'package:ui/habit%20tracker/views/profile%20view/%20widgets/profile_achievement_column.dart';
+import 'package:ui/habit%20tracker/views/profile%20view/%20widgets/profile_activity_column.dart';
+import 'package:ui/habit%20tracker/views/profile%20view/%20widgets/profile_friends_column.dart';
+import 'package:ui/habit%20tracker/views/profile%20view/models/activity_model.dart';
 
 import '../habit tracker/views/onboarding view/model/habits card model.dart';
 import '../habit tracker/views/onboarding view/widgets/custom_add_icon.dart';
 import '../habit tracker/views/onboarding view/widgets/custom_trailing.dart';
 import '../habit tracker/views/onboarding view/widgets/onboarding2_circle_avatars.dart';
+import '../habit tracker/views/profile view/models/friends_model.dart';
+import 'assets_data.dart';
 
 const kPurple1 = Color(0xff6B73FF);
 const kBlue1 = Color(0xff000dff);
@@ -21,7 +26,9 @@ const kBlack60 = Color(0xff686873);
 const kGreen100 = Color(0xff3BA935);
 const kRed100 = Color(0xffE3524F);
 const kOrange20 = Color(0xffFCDCD3);
+const kOrange10 = Color(0xffFFF3DA);
 const kTeal20 = Color(0xffD5ECE0);
+
 const double kMinPadding = 8;
 const double kNormPadding = 16;
 const double kMaxPadding = 24;
@@ -85,5 +92,76 @@ const List<Map<String, dynamic>> habitModel = [
     "icon": "🏃🏻‍♂",
     "title": "Runners",
     "subTitle": "336 members"
+  },
+];
+
+final List<ActivityModel> activitiesList = [
+  ActivityModel(
+      title: "112 points earned!",
+      subTitle: "Today, 12:34 PM",
+      icon: AssetsData.upArrowIcon),
+  ActivityModel(
+      title: "62 points earned!",
+      subTitle: "Today, 07:12 AM",
+      icon: AssetsData.upArrowIcon),
+  ActivityModel(
+      title: "Challenge completed!",
+      subTitle: "Yesterday, 14:12 PM",
+      icon: AssetsData.medalIcon),
+  ActivityModel(
+      title: "Weekly winning streak is broken!",
+      subTitle: "12 Jun, 16:14 PM",
+      icon: AssetsData.upArrowIcon,
+      flag: true,
+      iconColor: kRed100),
+  ActivityModel(
+      title: "96 points earned!",
+      subTitle: "11 Jun, 17:45 PM",
+      icon: AssetsData.upArrowIcon),
+  ActivityModel(
+      title: "110 points earned!",
+      subTitle: "10 Jun, 18:32 PM",
+      icon: AssetsData.upArrowIcon),
+  ActivityModel(
+      title: "112 points earned!",
+      subTitle: "10 Jun, 16:32 PM",
+      icon: AssetsData.upArrowIcon),
+  ActivityModel(
+      title: "112 points earned!",
+      subTitle: "Today, 12:34 PM",
+      icon: AssetsData.upArrowIcon),
+];
+
+final List<FriendsModel> friendsList = [
+  FriendsModel(
+      name: "Sharie Bento", points: "912 Points", avatar: AssetsData.friend1),
+  FriendsModel(
+      name: "Micah Dantoni", points: "850 Points", avatar: AssetsData.friend2),
+  FriendsModel(
+      name: "Oral Padlo", points: "950 Points", avatar: AssetsData.friend3),
+  FriendsModel(
+      name: "Maressa Mcdiarmid",
+      points: "700 Points",
+      avatar: AssetsData.friend4),
+  FriendsModel(
+      name: "Regina Stire", points: "1000 Points", avatar: AssetsData.friend5),
+  FriendsModel(
+      name: "Jennings Stohler",
+      points: "999 Points",
+      avatar: AssetsData.avatar1),
+];
+
+const List<Map<String, dynamic>> achievementsList = [
+  {
+    "color": kBlue10,
+    "icon": "🏃🏻‍♂️",
+    "title": "Best Runner!",
+    "subTitle": "1 months ago"
+  },
+  {
+    "color": kOrange10,
+    "icon": "🥇",
+    "title": "Best of the month!",
+    "subTitle": "2 days ago"
   },
 ];

@@ -32,4 +32,16 @@ class AssetsData {
   static const folderIcon = 'assets/habit tracker images/folderIcon.svg';
   static const users3Icon = 'assets/habit tracker images/users3Icon.svg';
   static const medalIcon = 'assets/habit tracker images/medalIcon.svg';
+  static const settingIcon = 'assets/habit tracker images/settingIcon.svg';
+  static const profileAvatar = 'assets/habit tracker images/profileAvatar.jpg';
+  static const filterIcon = 'assets/habit tracker images/filterIcon.svg';
+  static const upArrowIcon = 'assets/habit tracker images/upArrowIcon.svg';
+  static const editIcon = 'assets/habit tracker images/editIcon.svg';
+  static const plusIcon = 'assets/habit tracker images/plusIcon.svg';
+  static const trashIcon = 'assets/habit tracker images/trashIcon.svg';
+  static const friend1 = 'assets/habit tracker images/friend1.jpg';
+  static const friend2 = 'assets/habit tracker images/friend2.jpg';
+  static const friend3 = 'assets/habit tracker images/friend3.jpg';
+  static const friend4 = 'assets/habit tracker images/friend4.jpg';
+  static const friend5 = 'assets/habit tracker images/friend5.jpg';
 }

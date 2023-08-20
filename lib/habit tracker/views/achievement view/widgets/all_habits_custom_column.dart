@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:ui/core/constants.dart';
 import 'package:ui/core/styles.dart';
-
-import '../../../../core/assets_data.dart';
+import 'package:ui/habit tracker/views/achievement view/widgets/custom_orange_container.dart';
 
 class AllHabitsCustomColumn extends StatelessWidget {
   const AllHabitsCustomColumn({
@@ -31,22 +28,7 @@ class AllHabitsCustomColumn extends StatelessWidget {
           Text(title, style: Styles.subLabelTextStyle),
           if (flag == null)
             Text(subTitle, style: Styles.titleTextStyle.copyWith(color: color)),
-          if (flag != null)
-            Container(
-              height: 24,
-              width: 48,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(kMinRadius),
-                  color: const Color(0xffFFF3DA)),
-              padding: const EdgeInsets.all(2),
-              child: Row(
-                children: [
-                  SvgPicture.asset(AssetsData.medalIcon),
-                  Text("322",
-                      style: Styles.titleTextStyle.copyWith(color: const Color(0xffFEA800) , fontSize: 14)),
-                ],
-              ),
-            ),
+          if (flag != null) const CustomOrangeContainer(text: "322"),
         ],
       ),
     );

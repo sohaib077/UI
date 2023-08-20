@@ -1,12 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:ui/habit%20tracker/views/profile%20view/cubits/profile_cubit.dart';
+import 'package:ui/habit%20tracker/views/profile%20view/cubits/profile_cubit.dart';
+import 'package:ui/habit%20tracker/views/profile%20view/cubits/profile_cubit.dart';
 
 import '../../../../core/constants.dart';
 
 class AchievementToggleTabs extends StatefulWidget {
-  const AchievementToggleTabs({Key? key}) : super(key: key);
+  const AchievementToggleTabs(
+      {Key? key, this.tab1, this.tab2, this.tab3, this.flag = false})
+      : super(key: key);
 
   @override
   State<AchievementToggleTabs> createState() => _AchievementToggleTabsState();
+
+  final String? tab1;
+  final String? tab2;
+  final String? tab3;
+  final bool flag;
 }
 
 class _AchievementToggleTabsState extends State<AchievementToggleTabs> {
@@ -32,7 +42,7 @@ class _AchievementToggleTabsState extends State<AchievementToggleTabs> {
                   ? 0
                   : index == 2
                       ? width - (width / 3 - kMaxPadding) - 48
-                      : kMaxPadding + 77,
+                      : kMaxPadding + 82,
 
               height: 35,
               // width: (width / 2) ,
@@ -52,17 +62,24 @@ class _AchievementToggleTabsState extends State<AchievementToggleTabs> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  const SizedBox(width: 30),
+                  const SizedBox(width: 10),
                   GestureDetector(
                     onTap: () {
                       setState(() {
                         index = 0;
+                        if (widget.flag)
+                          ProfileCubit.get(context).changeIndex(index);
                       });
                     },
-                    child: Text(
-                      "Daily",
-                      style: TextStyle(
-                        color: index == 0 ? kBlue1 : null,
+                    child: SizedBox(
+                      width: width / 3 - kMaxPadding * 2,
+                      child: Center(
+                        child: Text(
+                          widget.tab1 ?? "Daily",
+                          style: TextStyle(
+                            color: index == 0 ? kBlue1 : null,
+                          ),
+                        ),
                       ),
                     ),
                   ),
@@ -71,12 +88,19 @@ class _AchievementToggleTabsState extends State<AchievementToggleTabs> {
                     onTap: () {
                       setState(() {
                         index = 1;
+                        if (widget.flag)
+                          ProfileCubit.get(context).changeIndex(index);
                       });
                     },
-                    child: Text(
-                      "Weekly",
-                      style: TextStyle(
-                        color: index == 1 ? kBlue1 : null,
+                    child: SizedBox(
+                      width: width / 3 - kMaxPadding * 2,
+                      child: Center(
+                        child: Text(
+                          widget.tab2 ?? "Weekly",
+                          style: TextStyle(
+                            color: index == 1 ? kBlue1 : null,
+                          ),
+                        ),
                       ),
                     ),
                   ),
@@ -85,16 +109,26 @@ class _AchievementToggleTabsState extends State<AchievementToggleTabs> {
                     onTap: () {
                       setState(() {
                         index = 2;
+                        if (widget.flag)
+                          ProfileCubit.get(context).changeIndex(index);
                       });
                     },
-                    child: Text(
-                      "Monthly",
-                      style: TextStyle(
-                        color: index == 2 ? kBlue1 : null,
+                    child: SizedBox(
+                      width: width / 3 - kMaxPadding * 2,
+                      child: Center(
+                        child: FittedBox(
+                          fit: BoxFit.scaleDown,
+                          child: Text(
+                            widget.tab3 ?? "Monthly",
+                            style: TextStyle(
+                              color: index == 2 ? kBlue1 : null,
+                            ),
+                          ),
+                        ),
                       ),
                     ),
                   ),
-                  const SizedBox(width: 20),
+                  const SizedBox(width: 10),
                 ],
               ),
             ),
