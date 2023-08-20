@@ -40,8 +40,8 @@ class MyApp extends StatelessWidget {
                     systemOverlayStyle: SystemUiOverlayStyle(
                         statusBarColor: Colors.transparent,
                         statusBarIconBrightness: Brightness.dark))),
-            // home: const SplashView(),
-            home: const HomeLayoutView(),
+            home: const SplashView(),
+            // home: const HomeLayoutView(),
           ),
         );
       },

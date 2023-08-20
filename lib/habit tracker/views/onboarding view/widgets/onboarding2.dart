@@ -16,7 +16,7 @@ class Onboarding2 extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const SizedBox(height: 20),
+        const SizedBox(height: 10),
         const CustomOnboarding2Text(title: 'Challenges'),
         const ChallengesCard(),
         const SizedBox(height: 4),

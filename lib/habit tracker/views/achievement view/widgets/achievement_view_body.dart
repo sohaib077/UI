@@ -3,7 +3,6 @@ import 'package:ui/core/constants.dart';
 import 'package:ui/habit tracker/views/achievement view/widgets/achievement_app_bar.dart';
 import 'package:ui/habit tracker/views/achievement view/widgets/achievement_line_chart.dart';
 import 'package:ui/habit tracker/views/achievement view/widgets/all_habits_custom_card.dart';
-import 'package:ui/habit%20tracker/views/achievement%20view/widgets/emojis_line_chart.dart';
 import 'package:ui/habit%20tracker/views/onboarding%20view/widgets/custom_container.dart';
 
 import '../../home view/widgets/app_bar_separator.dart';
@@ -45,23 +44,23 @@ class AchievementViewBody extends StatelessWidget {
                     ],
                   ),
                 ),
-                const SizedBox(height: 8),
-                CustomContainer(
-                  // height: 200,
-                  margin: 0,
-                  padding: const EdgeInsets.all(kNormPadding),
-                  child: Column(
-                    children: const [
-                      AchievementAllHabitsRow(
-                        icon: "🙂",
-                        title: "Happy",
-                        subTitle: "Avg. Mood",
-                      ),
-                      SizedBox(height: 10),
-                      EmojisLineChart(),
-                    ],
-                  ),
-                ),
+                // const SizedBox(height: 8),
+                // CustomContainer(
+                //   // height: 200,
+                //   margin: 0,
+                //   padding: const EdgeInsets.all(kNormPadding),
+                //   child: Column(
+                //     children: const [
+                //       AchievementAllHabitsRow(
+                //         icon: "🙂",
+                //         title: "Happy",
+                //         subTitle: "Avg. Mood",
+                //       ),
+                //       SizedBox(height: 10),
+                //       EmojisLineChart(),
+                //     ],
+                //   ),
+                // ),
                 const SizedBox(height: 80),
               ],
             ),

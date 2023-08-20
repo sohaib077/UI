@@ -165,3 +165,18 @@ const List<Map<String, dynamic>> achievementsList = [
     "subTitle": "2 days ago"
   },
 ];
+
+final List<FriendsModel> leaderboardList = [
+  FriendsModel(
+      name: "Oral Padlo", points: "950 Points", avatar: AssetsData.friend3),
+  FriendsModel(
+      name: "Sharie Bento", points: "789 Points", avatar: AssetsData.friend1),
+  FriendsModel(
+      name: "Micah Dantoni", points: "650 Points", avatar: AssetsData.friend2),
+  FriendsModel(
+      name: "Maressa Mcdiarmid",
+      points: "555 Points",
+      avatar: AssetsData.friend4),
+  FriendsModel(
+      name: "Regina Stire", points: "456 Points", avatar: AssetsData.friend5),
+];

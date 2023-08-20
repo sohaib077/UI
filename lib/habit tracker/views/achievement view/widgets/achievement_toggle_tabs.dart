@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:ui/habit%20tracker/views/profile%20view/cubits/profile_cubit.dart';
-import 'package:ui/habit%20tracker/views/profile%20view/cubits/profile_cubit.dart';
-import 'package:ui/habit%20tracker/views/profile%20view/cubits/profile_cubit.dart';
 
 import '../../../../core/constants.dart';
 

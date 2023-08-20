@@ -44,4 +44,5 @@ class AssetsData {
   static const friend3 = 'assets/habit tracker images/friend3.jpg';
   static const friend4 = 'assets/habit tracker images/friend4.jpg';
   static const friend5 = 'assets/habit tracker images/friend5.jpg';
+  static const crown = 'assets/habit tracker images/crown.svg';
 }

@@ -18,8 +18,7 @@ class HabitsCardListview extends StatelessWidget {
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),
       itemBuilder: (context, index) =>
-          HabitsCardItem(cardItem: cardList[index]),
+          HabitsCardItem(cardItem: cardList[index], index: index),
     );
   }
 }
-

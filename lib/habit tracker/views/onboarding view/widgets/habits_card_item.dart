@@ -10,34 +10,78 @@ import 'custom_circular_percent.dart';
 import 'list_tile_sub_title.dart';
 import 'list_tile_title.dart';
 
-class HabitsCardItem extends StatelessWidget {
+class HabitsCardItem extends StatefulWidget {
   const HabitsCardItem({
     super.key,
-    required this.cardItem,
+    required this.cardItem, required this.index,
   });
 
   final HabitsCardModel cardItem;
+  final int index;
+  @override
+  State<HabitsCardItem> createState() => _HabitsCardItemState();
+}
+
+class _HabitsCardItemState extends State<HabitsCardItem>
+    with SingleTickerProviderStateMixin {
+  late AnimationController controller;
+  late Animation<Offset> animation;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    controller = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 300),
+    );
+    animation = Tween<Offset>(
+            begin: Offset(
+                0,
+                (widget.index == 0)
+                    ? widget.index.toDouble() + .5
+                    : widget.index.toDouble()),
+            end: Offset.zero)
+        .animate(controller);
+    controller.forward();
+  }
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    controller.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
-    return Slidable(
-      startActionPane: customStartActionPane(),
-      endActionPane: customEndActionPane(),
-      child: CustomContainer(
-        child: ListTile(
-          leading: CustomCircularPercent(
-              percent: cardItem.percent, text: cardItem.leadingIcon),
-          title: ListTileTitle(title: cardItem.title),
-          subtitle: ListTileSubTitle(
-            subTitle: cardItem.subTitle,
+    return AnimatedBuilder(
+      animation: controller,
+      builder: (context, child) {
+        return SlideTransition(
+        position: animation,
+        child: Slidable(
+          startActionPane: customStartActionPane(),
+          endActionPane: customEndActionPane(),
+          child: CustomContainer(
+            child: ListTile(
+              leading: CustomCircularPercent(
+                  percent: widget.cardItem.percent,
+                  text: widget.cardItem.leadingIcon),
+              title: ListTileTitle(title: widget.cardItem.title),
+              subtitle: ListTileSubTitle(
+                subTitle: widget.cardItem.subTitle,
+              ),
+              trailing: widget.cardItem.trailing,
+              minLeadingWidth: 0,
+              minVerticalPadding: 0,
+              dense: true,
+              visualDensity: const VisualDensity(vertical: -2),
+            ),
           ),
-          trailing: cardItem.trailing,
-          minLeadingWidth: 0,
-          minVerticalPadding: 0,
-          dense: true,
-          visualDensity: const VisualDensity(vertical: -2),
         ),
-      ),
+      );
+      },
     );
   }
 
